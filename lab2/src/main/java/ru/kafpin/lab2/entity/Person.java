@@ -2,6 +2,7 @@ package ru.kafpin.lab2.entity;
 
 import java.time.LocalDate;
 import jakarta.persistence.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name = "persons")
@@ -17,6 +18,7 @@ public class Person {
     private String nationality;
     private int height;
     private double weight;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthDate;
     private String phoneNumber;
 

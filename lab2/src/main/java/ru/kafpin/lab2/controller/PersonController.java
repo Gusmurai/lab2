@@ -20,7 +20,7 @@ public class PersonController {
     // отобразить все
     @GetMapping
     public String mainPage(Model model) {
-        Iterable<Person> allPersons = personRepository.findAll();
+        List<Person> allPersons = personRepository.findAll();
         model.addAttribute("persons", allPersons);
         return "main";
     }
